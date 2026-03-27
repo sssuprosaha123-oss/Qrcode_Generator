@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rasa:ital@0;1&display=swap');
+
+:root{
+    --font-family: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    background-color:#000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mainContainer{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('Images/qrBg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar, .homeContainer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar img{
+    width: 15%;
+    margin: 0 20px;
+}
+
+.sidebar .textContainer h1, p{
+    font-family: var(--font-family);
+    margin-bottom: 5px;
+}
+
+.home{
+    height: 200px;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h2{
+    font-family: var(--font-family);
+}
+
+#qrInput{
+    height: 25px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 15px 0 25px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+#generateBtn, #downloadBtn, #closeBtn{
+    height: 35px;
+    width: 85%;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#generateBtn:hover, #downloadBtn:hover, #closeBtn:hover{
+    transform: scale(1.02);
+}
+
+#qrPopup{
+    height: 450px;
+    width: 300px;
+    background-color: #000;
+    position: absolute;
+    bottom: 60%;
+    opacity: 0;
+    transform: scale(0);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease,
+                opacity 0.5s ease, 
+                bottom 0.5s ease;
+}
+
+#qrPopup.show{
+    transform: scale(1);
+    opacity: 1;
+    bottom: 15%;
+}
+
+#qrImg{
+    width: 70%;
+    border: 8px solid #fff;
+    border-radius: 5px;
+    margin: 20px 0 25px;
+}
+
+#qrPopup h2{
+    color: #fff;
+    font-family: var(--font-family);
+}
+#downloadBtn{
+    width: 70%;
+    background: #fff;
+    color: #000;
+    margin: 3px 0;
+}
+
+#closeBtn{
+    width:70%;
+    border: 1px solid #fff;
+    margin: 3px 0;
+}
+
